@@ -1,4 +1,4 @@
-## ERC20 Token Standard
+## [ERC20 Token Standard](https://eips.ethereum.org/EIPS/eip-20)
 
 1- **A token** is designed to represent something of value but also things like voting rights or
 discount vouchers. **It can represent any fungible trading good;**
@@ -31,3 +31,27 @@ partially-ERC20-compliant;
 10- A full compatible **ERC20 Token must implement 6 functions and 2 events.**
 
 11- There are thousands of ERC20 token contracts defined: https://etherscan.io/tokens
+
+## ERC20 Tokens - allowed, transferFrom() and approve()
+
+1- **transfer()** function is used to send tokens from one user to another, but it doesn’t
+work well when tokens are being used to pay for a function in a smart contract;
+
+2- **ERC20** standard defines a mapping data structure named **allowed** and 2 functions
+`approve(...)` and `transferFrom(...)` that permit a token owner to **give another address
+approval to transfer up to a number of tokens** known as allowance;
+
+3- Allowances for an address can only be set by the owner of that address;
+
+Imagine there are 2 users **A** and **B**. **A has 1000 tokens and wants to give permission to B to spend 100 of them.**
+
+
+- **A** will call `approve(address_of_B, 100)`. After that the allowed data structure will
+contain the following information: `allowed[address_of_A][address_of_B] = 100`
+
+- If **B** wants later to transfer 20 tokens from **A** to his account, **B** will execute the
+`transferFrom()` function in this way: `transferFrom(address_of_A, address_of_B, 20)`.
+
+After calling the `transferFrom()` function (by B) the balance of A decreased by 20
+and the balance of B increased by 20 tokens and the allowed mapping will contain
+the following info: `allowed[address_of_A][address_of_B] = 80`
