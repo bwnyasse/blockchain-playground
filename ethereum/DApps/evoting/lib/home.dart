@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
   //url from Infura
   final String blockchainUrl = "https://rinkeby.infura.io/v3/26b02f5644054472b3e129acc148be2d";
 
-  //strore the value of alpha and beta
+  //store the value of alpha and beta
   int totalVotesA = 0;
   int totalVotesB = 0;
   //
@@ -49,8 +49,8 @@ class _HomePageState extends State<HomePage> {
     // Note, to get the contract address, go back to your Remix IDE,
     // click on the Deploy and Run tab, and click the copy icon
     // below the Deployed Contracts
-    String contractAddress = "0x3d25c140fabbd73E2B58A55E704aa234F798912c";
-
+    String contractAddress = "0xFaF9056b56ac21e13B6BF1991BEf038f80F4af57";
+    
     // Construct a contract using the DeployedContract class from our web3dart
     // package, which takes in the ABI file, name of our smart contract
     // (which in our case was Voting), and the contract address and
@@ -167,7 +167,7 @@ class _HomePageState extends State<HomePage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Evoting Demo on Ethereum'),
+          title: const Text('DApp - Evoting Demo on Ethereum'),
         ),
         body: Container(
           padding: const EdgeInsets.all(20),
