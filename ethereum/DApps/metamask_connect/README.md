@@ -14,4 +14,6 @@ We will use :
 
 ## The result of the application : 
 
+    flutter run -d chrome
+    
 ![demo video](videos/demo_video.gif)
