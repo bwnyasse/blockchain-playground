@@ -14,8 +14,8 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   flutter_web3: ^2.1.9
-  niku: ^2.2.4
   get: ^4.6.1
+  flutter_signin_button: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -25,3 +25,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  fonts:
+  - family: UiIcons
+    fonts:
+      - asset: lib/icon_font/ui_icons.ttf

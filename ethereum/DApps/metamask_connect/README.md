@@ -1,6 +1,6 @@
 # metamask_connect
 
-How to build a modern web Dapp with Flutter!
+How to build a modern web Dapp with Flutter that connects to Web3 providers ! 
 
 We will use :
 
@@ -12,12 +12,6 @@ We will use :
 
 - Using the Ethereum object and its method like `requestAccount`.
 
-- Using [Ethers js](https://docs.ethers.io/v5/) to interact with smart contracts.
+## The result of the application : 
 
-- Using default ContractERC20 to construct the contract that has [ERC20 standard](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/).
-
-## Inspiration : 
-
-- [link 1](https://github.com/GhostWalker562/no-longer-beginner-tutorials/blob/master/metamask/lib/metamask.dart)
-
-- [link 2](https://medium.com/coinmonks/building-modern-web-dapp-with-flutter-91656c71d8b)
+![demo video](videos/demo_video.gif)

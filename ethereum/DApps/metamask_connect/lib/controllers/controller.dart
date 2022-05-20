@@ -3,7 +3,6 @@ import 'package:get/get_state_manager/get_state_manager.dart';
 
 // The web3 part goes here ...
 class HomeController extends GetxController {
-  ContractERC20? cakeToken;
 
   String currentAddress = '';
 
@@ -53,7 +52,6 @@ class HomeController extends GetxController {
   clear() {
     currentAddress = '';
     currentChain = -1;
-    cakeToken = null;
     update();
   }
 
