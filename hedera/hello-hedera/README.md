@@ -5,7 +5,12 @@
 This **hello project** follows the [official tutorial](https://docs.hedera.com/guides/getting-started/introduction)
 
 ### Checking My Account Balance
-### Create Account Sample 
+
+To know my actual account balance : 
+
+    mvn compile exec:java -Dexec.mainClass="net.bwnyasse.AccountBalanceSample"
+
+### Create Account Sample
 
 - Created new a Hedera account with an initial balance of 1,000 tinybar$
 
@@ -13,7 +18,7 @@ This **hello project** follows the [official tutorial](https://docs.hedera.com/g
 
 - Verified the starting balance of the new account by submitting a query to the network
 
-### To test it 
+#### To test it : 
 
     mvn compile exec:java -Dexec.mainClass="net.bwnyasse.CreateAccountSample"
 
