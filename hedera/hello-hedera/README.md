@@ -1,6 +1,6 @@
 # Hedera 
 
-## My starting project 
+## My starting project using the Hedera test network 
 
 This **hello project** follows the [official tutorial](https://docs.hedera.com/guides/getting-started/introduction)
 
@@ -14,4 +14,10 @@ This **hello project** follows the [official tutorial](https://docs.hedera.com/g
 
 ### To test it 
 
-    
+    mvn compile exec:java -Dexec.mainClass="net.bwnyasse.CreateAccountSample"
+
+the output : 
+
+    The new account ID is: 0.0.34920415
+    The new account balance is: 1000 tℏ
+
