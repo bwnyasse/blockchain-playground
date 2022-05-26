@@ -35,3 +35,16 @@ the output :
 - Created an account
 
 - Transferred hbars to another account
+
+#### To test it : 
+
+    mvn compile exec:java -Dexec.mainClass="net.bwnyasse.TransferHbarSample"
+
+the example output : 
+
+    The new account ID is: 0.0.34921821
+    The new account balance is: 1000 tℏ
+    The transfer transaction was: SUCCESS
+    The cost of this query is: 0 tℏ
+    The new account balance is: 2000 tℏ
+    My origin account balance is: 9997.81891422 ℏ
