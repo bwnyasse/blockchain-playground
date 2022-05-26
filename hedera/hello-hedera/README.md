@@ -4,6 +4,7 @@
 
 This **hello project** follows the [official tutorial](https://docs.hedera.com/guides/getting-started/introduction)
 
+### Checking My Account Balance
 ### Create Account Sample 
 
 - Created new a Hedera account with an initial balance of 1,000 tinybar$
@@ -19,5 +20,7 @@ This **hello project** follows the [official tutorial](https://docs.hedera.com/g
 the output : 
 
     The new account ID is: 0.0.34920415
-    The new account balance is: 1000 tℏ
+    ...
 
+
+### Transfer hbar
