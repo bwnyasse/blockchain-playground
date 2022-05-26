@@ -4,13 +4,13 @@
 
 This **hello project** follows the [official tutorial](https://docs.hedera.com/guides/getting-started/introduction)
 
-### Checking My Account Balance
+### 1- Checking My Account Balance
 
 To know my actual account balance : 
 
     mvn compile exec:java -Dexec.mainClass="net.bwnyasse.AccountBalanceSample"
 
-### Create Account Sample
+### 2- Create Account Sample
 
 - Created new a Hedera account with an initial balance of 1,000 tinybar$
 
@@ -28,4 +28,4 @@ the output :
     ...
 
 
-### Transfer hbar
+### 3- Transfer hbar
