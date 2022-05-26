@@ -45,8 +45,10 @@ public class CreateAccountLogic {
 
     }
 
-    public static void exec()
+    public static AccountId exec()
             throws TimeoutException, PrecheckStatusException, ReceiptStatusException {
+
+        System.out.println("------------------------------------");
 
         // Get the new account ID
         AccountId newAccountId = singleCreateNewAccount();
@@ -62,5 +64,7 @@ public class CreateAccountLogic {
                 .execute(client);
 
         System.out.println("The new account balance is: " + accountBalance.hbars);
+
+        return newAccountId;
     }
 }

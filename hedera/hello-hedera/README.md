@@ -29,3 +29,9 @@ the output :
 
 
 ### 3- Transfer hbar
+
+- Set up your Hedera environment to submit transactions and queries
+
+- Created an account
+
+- Transferred hbars to another account
