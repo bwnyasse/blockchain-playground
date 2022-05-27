@@ -1,8 +1,8 @@
 # Hedera 
 
-![hedera](hedera.png)
+![hedera](../hedera.png)
 
-## My starting project using the Hedera test network 
+## Hello Hedera : My starting project using the Hedera test network 
 
 This **hello project** follows the [official tutorial](https://docs.hedera.com/guides/getting-started/introduction)
 
