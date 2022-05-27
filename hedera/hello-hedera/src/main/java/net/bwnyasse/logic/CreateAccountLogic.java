@@ -12,7 +12,7 @@ import com.hedera.hashgraph.sdk.PrivateKey;
 import com.hedera.hashgraph.sdk.PublicKey;
 import com.hedera.hashgraph.sdk.ReceiptStatusException;
 import com.hedera.hashgraph.sdk.TransactionResponse;
-import net.bwnyasse.common.Common;
+import net.bwnyasse.BlockchainPlaygroundHederaCommon;
 
 public class CreateAccountLogic {
 
@@ -25,8 +25,8 @@ public class CreateAccountLogic {
 
         // Create your Hedera testnet client
         // Client client = Client.forTestnet();
-        // client.setOperator(Common.getAccountId(), Common.getMyPrivateKey());
-        Client client = Common.getHederaClientForTestnet();
+        // client.setOperator(BlockchainPlaygroundHederaCommon.getAccountId(), Common.getMyPrivateKey());
+        Client client = BlockchainPlaygroundHederaCommon.getHederaClientForTestnet();
 
         // Generate a new key pair
         PrivateKey newAccountPrivateKey = PrivateKey.generateED25519();
@@ -56,7 +56,7 @@ public class CreateAccountLogic {
         // Log the account ID
         System.out.println("The new account ID is: " + newAccountId);
 
-        Client client = Common.getHederaClientForTestnet();
+        Client client = BlockchainPlaygroundHederaCommon.getHederaClientForTestnet();
 
         // Check the new account's balance
         AccountBalance accountBalance = new AccountBalanceQuery()

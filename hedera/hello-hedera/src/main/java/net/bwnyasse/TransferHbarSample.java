@@ -10,46 +10,53 @@ import com.hedera.hashgraph.sdk.PrecheckStatusException;
 import com.hedera.hashgraph.sdk.ReceiptStatusException;
 import com.hedera.hashgraph.sdk.TransactionResponse;
 import com.hedera.hashgraph.sdk.TransferTransaction;
-import net.bwnyasse.common.Common;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import net.bwnyasse.logic.AccountBalanceLogic;
 import net.bwnyasse.logic.CreateAccountLogic;
 
+
 public class TransferHbarSample {
 
-    public static void main(String[] args)
-            throws TimeoutException, PrecheckStatusException, ReceiptStatusException {
-        //
-        AccountId myAccountId = Common.getAccountId();
-        AccountId newAccountId = CreateAccountLogic.exec();
-        Client client = Common.getHederaClientForTestnet();
+        private static Logger LOGGER = LoggerFactory.getLogger(TransferHbarSample.class);
 
-        // Transfer hbar
-        TransactionResponse sendHbar = new TransferTransaction()
-                .addHbarTransfer(myAccountId, Hbar.fromTinybars(-1000)) // Sending account
-                .addHbarTransfer(newAccountId, Hbar.fromTinybars(1000)) // Receiving account
-                .execute(client);
+        public static void main(String[] args)
+                        throws TimeoutException, PrecheckStatusException, ReceiptStatusException {
+                //
+                AccountId myAccountId = BlockchainPlaygroundHederaCommon.getAccountId();
+                AccountId newAccountId = CreateAccountLogic.exec();
+                Client client = BlockchainPlaygroundHederaCommon.getHederaClientForTestnet();
 
-        // Verify the transfer transaction reached consensus
-        System.out.println("The transfer transaction was: " + sendHbar.getReceipt(client).status);
+                // Transfer hbar
+                TransactionResponse sendHbar = new TransferTransaction()
+                                .addHbarTransfer(myAccountId, Hbar.fromTinybars(-1000)) // Sending
+                                                                                        // account
+                                .addHbarTransfer(newAccountId, Hbar.fromTinybars(1000)) // Receiving
+                                                                                        // account
+                                .execute(client);
 
-        // Request the cost of the query
-        Hbar queryCost = new AccountBalanceQuery()
-                .setAccountId(newAccountId)
-                .getCost(client);
+                // Verify the transfer transaction reached consensus
+                System.out.println("The transfer transaction was: "
+                                + sendHbar.getReceipt(client).status);
 
-        System.out.println("The cost of this query is: " + queryCost);
+                // Request the cost of the query
+                Hbar queryCost = new AccountBalanceQuery()
+                                .setAccountId(newAccountId)
+                                .getCost(client);
 
-        // Check the new account's balance
-        AccountBalance accountBalanceNew = new AccountBalanceQuery()
-                .setAccountId(newAccountId)
-                .execute(client);
+                 System.out.println("The cost of this query is: " + queryCost);
 
-        System.out.println("The new account balance is: " + accountBalanceNew.hbars);
-                
-        // Just to check my actual account balance
-        AccountBalanceLogic.exec();
-        
-        // indicates successful termination
-        Runtime.getRuntime().exit(0);
-    }
+                // Check the new account's balance
+                AccountBalance accountBalanceNew = new AccountBalanceQuery()
+                                .setAccountId(newAccountId)
+                                .execute(client);
+
+                 System.out.println("The new account balance is: " + accountBalanceNew.hbars);
+
+                // Just to check my actual account balance
+                AccountBalanceLogic.exec();
+
+                // indicates successful termination
+                Runtime.getRuntime().exit(0);
+        }
 }

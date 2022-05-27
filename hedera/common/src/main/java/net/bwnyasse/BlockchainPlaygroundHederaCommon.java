@@ -1,11 +1,11 @@
-package net.bwnyasse.common;
+package net.bwnyasse;
 
 import com.hedera.hashgraph.sdk.PrivateKey;
 import com.hedera.hashgraph.sdk.AccountId;
 import io.github.cdimascio.dotenv.Dotenv;
 import com.hedera.hashgraph.sdk.Client;
 
-public class Common {
+public class BlockchainPlaygroundHederaCommon {
 
     public static Client client;
 
@@ -22,7 +22,8 @@ public class Common {
             return client;
         }
         client = Client.forTestnet();
-        client.setOperator(Common.getAccountId(), Common.getMyPrivateKey());
+        client.setOperator(getAccountId(), getMyPrivateKey());
         return client;
     }
+
 }
