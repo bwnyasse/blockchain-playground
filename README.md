@@ -2,6 +2,10 @@
 
 My personal blockchain playground
 
+## Hedera & Hash Graph
+
+- [My projects](https://github.com/bwnyasse/blockchain-playground/tree/main/hedera) to improve my skills on [Hedera](https://hedera.com/get-started)
+
 ## Ethereum & Solidity Programming 
 
 - [Snippets](https://github.com/bwnyasse/blockchain-playground/tree/main/ethereum/solidity) to learn Solidity
