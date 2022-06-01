@@ -38,3 +38,31 @@ Fungible tokens share a single set of properties and have interchangeable value 
     Stablecoin transfer from Treasury to Alice: SUCCESS
     Treasury balance {0.0.34960559=7500} units of token ID 0.0.34960559
     Alice's balance: {0.0.34960559=2500} units of token ID 0.0.34960559
+
+## Schedule Your First Transaction
+
+TODO
+
+## Deploy Your First Smart Contract
+
+
+### To compile solidity input 
+
+    docker run -v $PWD/src/main/resources/solidity:/sources \
+        ethereum/solc:stable \
+        -o /sources/output \
+        --abi --overwrite \
+        --bin /sources/input/HelloHedera.sol
+
+
+### To test it 
+
+    mvn compile exec:java -Dexec.mainClass="net.bwnyasse.DeployFirstSmartContratSample"
+
+
+
+TODO
+
+## Deploy a Contract Using the Hedera Token Service
+
+TODO
