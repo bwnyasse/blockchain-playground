@@ -11,6 +11,7 @@ this project shares common features like building test network client, retrieve 
 
 my starting project using the Hedera test network 
 
-## **first-nft**: 
+## **examples**: 
 
-how to handle nft with hedera
+A collection of examples to learn more about [Hedera](https://docs.hedera.com/guides/getting-started/try-examples)
+
