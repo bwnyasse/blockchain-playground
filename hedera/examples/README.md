@@ -82,4 +82,24 @@ I am using the **solidity compiler** provided as **docker image** :
 
 ## 5- Deploy a Contract Using the Hedera Token Service
 
-TODO
+
+### To compile solidity input 
+
+My **solidity files** are in `src/main/resources/solidity`. To compile the `.sol` files, 
+I am using the **solidity compiler** provided as **docker image** :  
+
+    docker run -v $PWD/src/main/resources/solidity:/sources \
+        ethereum/solc:stable \
+        -o /sources/output \
+        --abi --overwrite \
+        --bin /sources/input/HTS.sol
+
+### To test it 
+
+    mvn compile exec:java -Dexec.mainClass="net.bwnyasse.DeployContractWithHTS"
+
+### Example output
+
+    The transaction status: SUCCESS
+    The transaction record for the associate transactionTransactionRecord{receipt=TransactionReceipt{status=SUCCESS, exchangeRate=ExchangeRate{hbars=0, cents=0, expirationTime=1970-01-01T00:00:00Z, exchangeRateInCents=NaN}, accountId=null, fileId=null, contractId=null, topicId=null, tokenId=null, topicSequenceNumber=null, topicRunningHash=null, totalSupply=0, scheduleId=null, scheduledTransactionId=null, serials=[], duplicates=[], children=[]}, transactionHash=63f08a1b3ef2d30ada55bc923a5de1c67fd7a2735f02fffcb6a9d298d76aa2fcb6ca4612dc18b8366f742dfc13341268, consensusTimestamp=2022-06-01T23:10:15.632707230Z, transactionId=0.0.34913282@1654125004.457672399/1, transactionMemo=, transactionFee=0 tℏ, contractFunctionResult=ContractFunctionResult{contractId=0.0.359, evmAddress=null, errorMessage=null, bloom=, gasUsed=706076, logs=[], createdContractIds=[], stateChanges=[], gas=1943732, hbarAmount=0 tℏ, contractFunctionparametersBytes=49146bde000000000000000000000000000000000000000000000000000000000214bc020000000000000000000000000000000000000000000000000000000002157a52, rawResult=0000000000000000000000000000000000000000000000000000000000000016, senderAccountId=null}, transfers=[], tokenTransfers={}, tokenNftTransfers={}, scheduleRef=null, assessedCustomFees=[], automaticTokenAssociations=[], aliasKey=null, children=[], duplicates=[], parentConsensusTimestamp=2022-06-01T23:10:15.632707229Z, ethereumHash=63f08a1b3ef2d30ada55bc923a5de1c67fd7a2735f02fffcb6a9d298d76aa2fcb6ca4612dc18b8366f742dfc13341268}
+    The 0.0.34962002 should now be associated to my account: {0.0.34962002=0}
