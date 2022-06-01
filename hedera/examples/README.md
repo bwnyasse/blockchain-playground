@@ -3,7 +3,7 @@
 
 ![hedera](../hedera.png)
 
-## 0 - Compile the all project
+## 0 - Compile the whole project
 
 I am using [Apache Maven](https://maven.apache.org/) to `compile` and `run` my samples. 
 
@@ -80,6 +80,6 @@ I am using the **solidity compiler** provided as **docker image** :
     The transaction status is SUCCESS
     The contract updated message: Hello from Hedera again!
 
-## Deploy a Contract Using the Hedera Token Service
+## 5- Deploy a Contract Using the Hedera Token Service
 
 TODO
