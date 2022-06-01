@@ -10,10 +10,10 @@
   </parent>
 
   <groupId>net.bwnyasse</groupId>
-  <artifactId>blockchain-playground-hedera-first-nft</artifactId>
+  <artifactId>blockchain-playground-hedera-examples</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>blockchain-playground-hedera :: first-nft</name>
+  <name>blockchain-playground-hedera :: Examples</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
