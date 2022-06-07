@@ -1,6 +1,6 @@
 # blockchain-playground
 
-My personal blockchain playground
+My personal blockchain playground to improve my skills.
 
 ## Hedera & Hash Graph
 
